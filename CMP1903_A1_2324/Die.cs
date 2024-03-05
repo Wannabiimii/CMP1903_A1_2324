@@ -8,16 +8,51 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-
+        //creating a static instance of random so that random number generation is possible.
+        private static readonly Random randomNumber = new Random();
         //Property
+        private int _diceValue;
+        public Die()
+        {
+            Console.WriteLine("Creating a new Dice");
+            
 
+        }
+        // getter and setter for diceValue
+        public int DiceValue
+        {
+            get
+            {
+                {
+                
+                    return _diceValue;
+                }
+            }
+            set
+            {
+                
+
+                    if (value >= 1 && value <= 6)
+                    {
+                        _diceValue = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid value: out of range");
+                    }
+                
+            }
+        }
 
         //Method
-
+        public int Roll()
+        {
+            Console.WriteLine("Rolling a new value");
+            int _diceValue = randomNumber.Next(1,7);
+            Console.WriteLine($"rolled a {_diceValue}");
+            DiceValue = _diceValue;
+            return _diceValue;
+        }
 
     }
 }
