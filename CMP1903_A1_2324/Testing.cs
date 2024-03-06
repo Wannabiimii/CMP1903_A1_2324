@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
@@ -15,6 +16,51 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
-        //Method
+        //testing game object
+        public void TestGame()
+        {
+            Console.WriteLine("Testing Game");
+            Game testGame = new Game();
+            //running the test a thousand times
+            for (int i = 0; i < 1000; i++)
+            {
+                //rolling all the dice
+                testGame.rollDice();
+
+                //taking the individual die values and checking they are in the correct range
+                
+                int die1Value = testGame.Die1.DiceValue;
+                Debug.Assert(die1Value >= 1 && die1Value <= 6, "Die roll out of intended range");
+
+                int die2Value = testGame.Die2.DiceValue;
+                Debug.Assert(die2Value >= 1 && die2Value <= 6, "Die roll out of intended range");
+
+                int die3Value = testGame.Die3.DiceValue;
+                Debug.Assert(die3Value >= 1 && die3Value <= 6, "Die roll out of intended range");
+
+                //getting the sum of the dice
+                int sum = die1Value + die2Value + die3Value;
+                //checking sum is in the expected range
+                Debug.Assert(sum >= 3 && sum <= 18, "Total out of intended range");
+                //checking that the summing function is giving the correct value
+                Debug.Assert(sum == testGame.SumOfDice(),"sum function not returning the correct value");
+            }
+        }
+        public void TestDie()
+        {
+            Console.WriteLine("testing die");
+            Die testDie = new Die();
+            for (int i = 0;i < 1000;i++)
+            {
+                testDie.Roll();
+                Debug.Assert((testDie.DiceValue>=1 && testDie.DiceValue <= 6),$"Die roll out of intended range:{testDie.DiceValue}");
+            }
+        }
+        // <black-eye-inc> Review
+        // A great and effective use of "Debug.assert" throughout "Testing.cs"!
+        // </black-eye-inc>
+           
     }
+
 }
+
