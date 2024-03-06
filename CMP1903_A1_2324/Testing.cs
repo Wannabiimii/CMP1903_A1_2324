@@ -26,7 +26,7 @@ namespace CMP1903_A1_2324
             for (int i = 0; i < 1000; i++)
             {
                 //rolling all the dice
-                testGame.rollDice();
+                testGame.RollDice();
 
                 //taking the individual die values and checking they are in the correct range
                 
