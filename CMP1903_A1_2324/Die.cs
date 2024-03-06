@@ -43,10 +43,6 @@ namespace CMP1903_A1_2324
                 
             }
         }
-        // <black-eye-inc> Review:
-        // Great implementation of using encapsulation (a key Object-Oriented Principle) to protect
-        // internal values -- mentioning this in your video will gain you a mark!
-        // </black-eye-inc>
 
         //Method
         public int Roll()
@@ -61,9 +57,12 @@ namespace CMP1903_A1_2324
     }
 }
 
-// <black-eye-inc>
-// A brilliant, consistant and accurate/correct use of the C# style Guide's naming sceme has been
-// used throughout "Die.cs" -- Great Job!
-
-// Commentation, especially on the "Roll()" method is quite sparce.
-// </black-eye-inc>
+// Have the requirements been met?
+// Yes you have he used a property to store the value and created a method to store a value
+// The additional requirment he hasn't met is the use of XML doucmentation
+// Is the code formatted using the Style Guidelines correctly?
+// _dicevalue in the method shouldn't have an underscore unless he has trying to use the field then he doesn't need the int
+// Is the code easy to read?
+// Mostly buy I think he can write the get methode like this get { return _num; } and set method like this set { _num = value; } and put the set method in a try and catch instead of using an if 
+// Are different errors handled correctly?
+// Yes you have the setter method is inside an if to prevent the values from being outside 1 and 6

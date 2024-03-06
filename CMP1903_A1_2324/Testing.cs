@@ -55,12 +55,18 @@ namespace CMP1903_A1_2324
                 testDie.Roll();
                 Debug.Assert((testDie.DiceValue>=1 && testDie.DiceValue <= 6),$"Die roll out of intended range:{testDie.DiceValue}");
             }
-        }
-        // <black-eye-inc> Review
-        // A great and effective use of "Debug.assert" throughout "Testing.cs"!
-        // </black-eye-inc>
+        } 
            
     }
 
 }
+
+// Have the requirements been met?
+// Yes you have created a game and die object and tests their methods but he hasn't checked to see if the numbers added correctly all he does is that if it is in the possible range
+// Also the testing game gets a bit overloaded in the terminal if you want to test each indivual possiblity you could set each of the dice to a spefic value and then add them
+// Is the code formatted using the Style Guidelines correctly?
+// Is the code easy to read?
+// Yes you have used suitable naming for his objects
+// Are different errors handled correctly?
+// There are no possible errors that can happen in this class
 
