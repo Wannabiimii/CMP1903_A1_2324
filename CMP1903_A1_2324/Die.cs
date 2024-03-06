@@ -43,17 +43,19 @@ namespace CMP1903_A1_2324
                 
             }
         }
-        // <black-eye-inc> Review:
-        // Great implementation of using encapsulation (a key Object-Oriented Principle) to protect
-        // internal values -- mentioning this in your video will gain you a mark!
-        // </black-eye-inc>
+        
 
         //Method
         public int Roll()
         {
             Console.WriteLine("Rolling a new value");
+
+            //sets dice value to a random number
             int _diceValue = randomNumber.Next(1,7);
+
             Console.WriteLine($"rolled a {_diceValue}");
+
+            //updating the public dice value
             DiceValue = _diceValue;
             return _diceValue;
         }
@@ -61,9 +63,3 @@ namespace CMP1903_A1_2324
     }
 }
 
-// <black-eye-inc>
-// A brilliant, consistant and accurate/correct use of the C# style Guide's naming sceme has been
-// used throughout "Die.cs" -- Great Job!
-
-// Commentation, especially on the "Roll()" method is quite sparce.
-// </black-eye-inc>
